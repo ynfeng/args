@@ -16,12 +16,13 @@ public class Schema {
     public static final String COLON = ":";
     public static final int ZERO = 0;
     public static final int ONE = 1;
+    public static final int TWO = 2;
     private final List<ArgSpec> argSpecList;
 
     private Schema(String schemaText) {
         argSpecList = Arrays.stream(schemaText.split(SPACE))
             .map(str -> str.split(COLON))
-            .map(strArray -> ArgSpec.of(strArray[ZERO], strArray[ONE]))
+            .map(strArray -> ArgSpec.of(strArray[ZERO], strArray[ONE],strArray[TWO]))
             .collect(toList());
     }
 

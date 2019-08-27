@@ -39,7 +39,7 @@ public class ArgSpec {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ArgSpec)) {
             return false;
         }
 
@@ -48,13 +48,17 @@ public class ArgSpec {
         if (!label.equals(argSpec.label)) {
             return false;
         }
-        return type.equals(argSpec.type);
+        if (!type.equals(argSpec.type)) {
+            return false;
+        }
+        return defaultValue.equals(argSpec.defaultValue);
     }
 
     @Override
     public int hashCode() {
         int result = label.hashCode();
         result = 31 * result + type.hashCode();
+        result = 31 * result + defaultValue.hashCode();
         return result;
     }
 }

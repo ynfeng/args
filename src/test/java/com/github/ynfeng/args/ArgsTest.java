@@ -40,10 +40,10 @@ public class ArgsTest {
         assertThat(args.argValue("f"), is(false));
     }
 
-    @Test
-    public void should_support_string_array_type() {
-        Args args = new Args(Schema.of("l:strings:"), ArgLine.of("-l this,is,a,list"));
-        assertThat(args.argValue("l"), is(new String[] {"this", "is", "a", "list"}));
-    }
+//    @Test
+//    public void should_support_string_array_type() {
+//        Args args = new Args(Schema.of("l:strings:"), ArgLine.of("-l this,is,a,list"));
+//        assertThat(args.argValue("l"), is(new String[] {"this", "is", "a", "list"}));
+//    }
 }
 
