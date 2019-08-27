@@ -13,19 +13,19 @@ public class ArgSpecTest {
 
     @Test
     public void should_get_arg_spec_label() {
-        assertThat(ArgSpec.of("l", "boolean").label(), is("l"));
-        assertThat(ArgSpec.of("p", "int").label(), is("p"));
+        assertThat(ArgSpec.of("l", "boolean","false").label(), is("l"));
+        assertThat(ArgSpec.of("p", "int","8080").label(), is("p"));
     }
 
     @Test
     public void should_get_arg_spec_type() {
-        assertThat(ArgSpec.of("l", "boolean").type(), is("boolean"));
-        assertThat(ArgSpec.of("p", "int").type(), is("int"));
+        assertThat(ArgSpec.of("l", "boolean","false").type(), is("boolean"));
+        assertThat(ArgSpec.of("p", "int","8080").type(), is("int"));
     }
 
     @Test
     public void should_equals_given_same_label_and_type() {
-        assertThat(ArgSpec.of("l", "boolean"), is(ArgSpec.of("l", "boolean")));
+        assertThat(ArgSpec.of("l", "boolean","false"), is(ArgSpec.of("l", "boolean","false")));
     }
 
     @Test

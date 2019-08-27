@@ -25,8 +25,8 @@ public class SchemaTest {
 
     @Test
     public void should_get_arg_spec_from_schema() {
-        assertThat(Schema.of("l:boolean p:int").argSpec("l"), is(ArgSpec.of("l", "boolean")));
-        assertThat(Schema.of("l:boolean p:int").argSpec("p"), is(ArgSpec.of("p", "int")));
+        assertThat(Schema.of("l:boolean p:int").argSpec("l"), is(ArgSpec.of("l", "boolean", "false")));
+        assertThat(Schema.of("l:boolean p:int").argSpec("p"), is(ArgSpec.of("p", "int", "8080")));
     }
 
     @Test(expected = NoSuchArgSpecException.class)
@@ -37,7 +37,7 @@ public class SchemaTest {
     @Test
     public void should_get_all_arg_spec() {
         assertThat(Schema.of("l:boolean p:int").argSpecs(), hasItems(
-            ArgSpec.of("l", "boolean"),
-            ArgSpec.of("p", "int")));
+            ArgSpec.of("l", "boolean", "false"),
+            ArgSpec.of("p", "int", "8080")));
     }
 }
