@@ -28,4 +28,9 @@ public class ArgSpecTest {
         assertThat(ArgSpec.of("l", "boolean"), is(ArgSpec.of("l", "boolean")));
     }
 
+    @Test
+    public void should_get_default_value(){
+        assertThat(ArgSpec.of("l", "boolean","false").defaultValue(), is("false"));
+    }
+
 }

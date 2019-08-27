@@ -6,14 +6,20 @@ package com.github.ynfeng.args;
 public class ArgSpec {
     private final String label;
     private final String type;
+    private final String defaultValue;
 
-    private ArgSpec(String label, String type) {
+    private ArgSpec(String label, String type, String defaultValue) {
         this.label = label;
         this.type = type;
+        this.defaultValue = defaultValue;
     }
 
     public static ArgSpec of(String label, String type) {
-        return new ArgSpec(label, type);
+        return new ArgSpec(label, type, null);
+    }
+
+    public static ArgSpec of(String label, String type, String defaultValue) {
+        return new ArgSpec(label, type, defaultValue);
     }
 
     public String label() {
@@ -22,6 +28,10 @@ public class ArgSpec {
 
     public String type() {
         return type;
+    }
+
+    public String defaultValue() {
+        return defaultValue;
     }
 
     @Override
