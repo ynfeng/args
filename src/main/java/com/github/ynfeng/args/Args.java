@@ -19,6 +19,6 @@ public class Args {
         ArgSpec argSpec = schema.argSpec(label);
         Type<?> type = TypeFactory.get(argSpec.type());
         Optional<ArgLineElement> candidate = argLine.argLineElement(label);
-        return candidate.isPresent() ? (T) type.toValue(candidate.get().value()) : (T) type.defaultValue();
+        return candidate.isPresent() ? (T) type.toValue(candidate.get().value()) : (T) type.toValue(argSpec.defaultValue());
     }
 }

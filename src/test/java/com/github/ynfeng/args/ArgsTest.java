@@ -21,7 +21,7 @@ public class ArgsTest {
     public void should_get_defalut_value() {
         Args args = new Args(Schema.of("l:boolean:false p:int:8080"), ArgLine.of(""));
         assertThat(args.argValue("l"), is(false));
-        assertThat(args.argValue("p"), is(0));
+        assertThat(args.argValue("p"), is(8080));
     }
 
     @Test
