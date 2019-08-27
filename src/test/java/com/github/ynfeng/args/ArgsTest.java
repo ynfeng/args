@@ -37,7 +37,7 @@ public class ArgsTest {
         assertThat(args.argValue("l"), is(true));
         assertThat(args.argValue("p"), is(8080));
         assertThat(args.argValue("u"), is("root"));
-//        assertThat(args.argValue("f"), is(false));
+        assertThat(args.argValue("f"), is(false));
     }
 
     @Test
