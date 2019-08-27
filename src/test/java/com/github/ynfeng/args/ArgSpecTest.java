@@ -30,7 +30,7 @@ public class ArgSpecTest {
 
     @Test
     public void should_get_default_value(){
-        assertThat(ArgSpec.of("l", "boolean","false").defaultValue(), is("false"));
+        assertThat(ArgSpec.of("p", "int","8080").defaultValue(), is("8080"));
     }
 
 }
