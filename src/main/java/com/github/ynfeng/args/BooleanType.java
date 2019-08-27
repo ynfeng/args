@@ -14,7 +14,7 @@ public class BooleanType implements Type<Boolean> {
 
     @Override
     public Boolean toValue(String textValue) {
-        return null != textValue;
+        return "true".equalsIgnoreCase(textValue) || "".equalsIgnoreCase(textValue);
     }
 
     @Override
