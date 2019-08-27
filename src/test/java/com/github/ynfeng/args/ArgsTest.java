@@ -45,5 +45,11 @@ public class ArgsTest {
         Args args = new Args(Schema.of("l:strings:[]"), ArgLine.of("-l this,is,a,list"));
         assertThat(args.argValue("l"), is(new String[] {"this", "is", "a", "list"}));
     }
+
+    @Test
+    public void should_default_value(){
+        Args args = new Args(Schema.of("p:int:9090"), ArgLine.of(""));
+        assertThat(args.argValue("p"), is(9090));
+    }
 }
 
