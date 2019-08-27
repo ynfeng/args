@@ -1,0 +1,4 @@
+com.github.ynfeng.args.StringType
+com.github.ynfeng.args.IntegerType
+com.github.ynfeng.args.BooleanType
+com.github.ynfeng.args.StringArrayType
