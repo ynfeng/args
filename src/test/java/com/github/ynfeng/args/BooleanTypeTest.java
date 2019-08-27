@@ -20,10 +20,6 @@ public class BooleanTypeTest {
         assertThat(new BooleanType().toValue("true"), is(true));
     }
 
-    @Test
-    public void should_return_false_defalut_value() {
-        assertThat(new BooleanType().defaultValue(), is(false));
-    }
 
     @Test
     public void should_override_equals() {

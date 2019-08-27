@@ -18,11 +18,6 @@ public class IntegerTypeTest {
     }
 
     @Test
-    public void should_return_0_default_value() {
-        assertThat(new IntegerType().defaultValue(), is(0));
-    }
-
-    @Test
     public void should_override_equals() {
         assertThat(new IntegerType(), Is.is(new IntegerType()));
     }

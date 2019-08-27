@@ -16,11 +16,6 @@ public class StringTypeTest {
     }
 
     @Test
-    public void should_return_empty_defalut_value(){
-        assertThat(new StringType().defaultValue(), is(""));
-    }
-
-    @Test
     public void should_override_equals(){
         assertThat(new StringType(),is(new StringType()));
     }
